@@ -461,6 +461,10 @@ if __name__ == "__main__":
     train_dataset_hf = datasets.load_from_disk(TRAIN_DATA, TRAIN_SPLIT_NAME)
     val_dataset = datasets.load_from_disk(VAL_DATA, VAL_SPLIT_NAME)
 
+    # Detailed validation and filtering
+    # train_dataset = validate_and_filter_dataset(train_dataset, "train")
+    # val_dataset = validate_and_filter_dataset(val_dataset, "validation")
+
     # # Wrap the training dataset with the augmentation class
     # train_dataset = AugmentedDataset(
     #     original_dataset=train_dataset_hf,
